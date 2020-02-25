@@ -4,8 +4,9 @@
 
 <ul>
   {{#each burgers}}
+ <li> {{this.burger_name}}</li>
     {{#unless devoured}}
-      {{ burger devoured=false}}
+      {{ burgers devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -21,7 +22,7 @@
 </ul>
 
 <h2>Add a Burger</h2>
-<form class="create-form">
+<form class="create-form" action="/api/burgers" method="post">
 
   <div class="form-group">
     <label for="bu">Burger Name:</label>
