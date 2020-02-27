@@ -1,7 +1,6 @@
-<li>
+<form class="change-status" action="/api/burgers" method="post">
 	{{name}}
-
 	<button class="change-devoured" data-id="{{id}}" data-newburger="{{devoured}}">
 		{{#if devoured}}I'd like another.{{else}}Time to eat!!{{/if}}
 	</button>
-</li>
+</form>
